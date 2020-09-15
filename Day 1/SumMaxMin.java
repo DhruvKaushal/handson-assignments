@@ -1,7 +1,7 @@
 
 class SumMaxMin {
 	public static void main(String[] args) {
-		int mi = 10000000, ma = -10000000, sum = 0;
+		int mi = Integer.MAX_VALUE, ma = Integer.MIN_VALUE, sum = 0;
 		for(int i=0;i<args.length;i++){
 			int currNum = Integer.parseInt(args[i]);
 			if(currNum<mi){

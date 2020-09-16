@@ -4,6 +4,7 @@ class task2Main {
         address[] a = new address[5];
         a[0] = new address("Delhi", "Delhi", 100022);
         a[3] = new address("Karanataka", "BLR", 103223);
+        
         e[0] = new EmpRecords(1, "Dhruv", 51000, a[0]);
         e[1] = new EmpRecords(2, "Tez", 44000, a[1]);
         e[2] = new EmpRecords(3, "Slow", 60000, a[2]);;

@@ -1,6 +1,7 @@
 public class MainBank {
     public static void main(String[] args) {
         //pass the accountNo and amount to deposit from CLA
+        /*
         long accountNo = Long.parseLong(args[0]);
         double amount = Double.parseDouble(args[1]);
         //get the Account using the accountNo by calling getAccount(...)
@@ -15,9 +16,39 @@ public class MainBank {
             accNo.deposit(amount);
             accNo.accountInformation();
         }
+        */
         // show the account information before deposit
         //deposit the amount to that particular Account
         //show the account information after deposit
+        //Part 2
+        long accountFrom = Long.parseLong(args[0]);
+        long accountTo = Long.parseLong(args[1]);
+        double amount = Double.parseDouble(args[2]);
+        Account accNo1 = MainBank.getAccount(accountFrom);
+        Account accNo2 = MainBank.getAccount(accountTo);
+        if (accNo1 == null){
+            System.out.println("No such account exists to withdraw from");
+            return;
+        }
+        else{
+            accNo1.accountInformation();
+            accNo1.withdraw(amount);
+            accNo1.accountInformation();
+        }
+        System.out.println("Amount debited from account "+accountFrom);
+        //Withdraw from second account
+        if (accNo2 == null){
+            System.out.println("No such account exists to deposit in");
+            accNo1.deposit(amount);
+            return;
+        }
+        else{
+            accNo2.accountInformation();
+            accNo2.deposit(amount);
+            accNo2.accountInformation();
+        }
+        System.out.println("Amount debited from account "+accountFrom);
+
     }
 
     // pass the accountNO and get the Account from Accounts[] 

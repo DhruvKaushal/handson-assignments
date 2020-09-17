@@ -4,16 +4,16 @@ public class MainBank {
         long accountNo = Long.parseLong(args[0]);
         double amount = Double.parseDouble(args[1]);
         //get the Account using the accountNo by calling getAccount(...)
-        Account acc = MainBank.getAccount(accountNo);
+        Account accNo = MainBank.getAccount(accountNo);
         // if accountNo is wrong show the error message and must not perform any below
         // operation
-        if (acc == null){
+        if (accNo == null){
             System.out.println("No such account exists");
         }
         else{
-            acc.accountInformation();
-            acc.deposit(amount);
-            acc.accountInformation();
+            accNo.accountInformation();
+            accNo.deposit(amount);
+            accNo.accountInformation();
         }
         // show the account information before deposit
         //deposit the amount to that particular Account

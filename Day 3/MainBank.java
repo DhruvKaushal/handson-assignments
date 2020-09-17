@@ -47,8 +47,6 @@ public class MainBank {
             accNo2.deposit(amount);
             accNo2.accountInformation();
         }
-        System.out.println("Amount debited from account "+accountFrom);
-
     }
 
     // pass the accountNO and get the Account from Accounts[] 

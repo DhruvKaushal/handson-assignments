@@ -32,7 +32,7 @@ public class Account {
     */
     public void deposit(double amount) {
         this.balance += amount;
-        //System.out.println("deposits amount to account");
+        System.out.println("deposits amount to account");
     }
     public void accountInformation() {
         System.out.println("---- Account Information ----");

@@ -56,10 +56,10 @@ public class MainBankingPage {
 					service.transfer(sourceId, destinationId, amount);
 				} catch (AccountNotFoundException e) {
 					// TODO: handle exception
-					System.out.println(e.getMessage());
+					System.err.println(e.getMessage());
 				} catch (NotSufficientBalance e) {
 					// TODO: handle exception
-					System.out.println(e.getMessage());
+					System.err.println(e.getMessage());
 				}
 				break;
 			}

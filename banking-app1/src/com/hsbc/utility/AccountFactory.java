@@ -1,6 +1,7 @@
 package com.hsbc.utility;
-import com.hsbc.model.ArrayCustomerInfoDao;
+//import com.hsbc.model.ArrayCustomerInfoDao;
 import com.hsbc.model.AccountServiceImpl;
+import com.hsbc.model.CollectionsBackedDao;
 
 public class AccountFactory {
 
@@ -8,7 +9,7 @@ public class AccountFactory {
 		Object obj = null;
 		switch(type) {
 		case DAO: 
-			obj = new ArrayCustomerInfoDao();
+			obj = new CollectionsBackedDao();
 			break;
 		
 		case SERVICE:

@@ -43,7 +43,12 @@ public class displayItems extends HttpServlet {
 		pw.print("<html><body><p>");
 		HttpSession session = request.getSession();
 		List listx = (List<String>) session.getAttribute("itemlist");
-		pw.print(listx);
+		pw.print("<ul>");
+		for(Object item: listx) {
+			pw.print("<li>"+item+"</li>");
+		}
+		pw.print("</ul>");
+		//pw.print(listx);
 		pw.print("</p></body></html>");
 	}
 
